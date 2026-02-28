@@ -991,13 +991,13 @@
         <div class="auto-check-indicator" id="autoCheckIndicator">⏳ جاري التحقق التلقائي...</div>
         <button onclick="checkEmailVerification()" id="manualCheckBtn">✅ تحقق يدوياً</button>
         <button class="resend-btn" onclick="resendVerification()" id="resendBtn">🔄 إعادة إرسال الرابط</button>
-        <button onclick="cancelVerification()" style="background:#e74c3c; color:white; margin-top:5px;">✗ إلغاء العملية ومسح البيانات</button>
+        <button onclick="cancelVerification()" style="background:#e74c3c; color:white; margin-top:5px;">⛔️ إلغاء العملية ومسح البيانات</button>
       </div>
       
       <button onclick="register()" id="registerBtn">تسجيل جديد</button>
       <button onclick="login()" id="loginBtn">تسجيل دخول</button>
       
-      <button class="forgot-password-btn" onclick="showForgotPasswordModal()" id="forgotBtn">🔑 نسيت كلمة السر؟</button>
+      <button class="forgot-password-btn" onclick="showForgotPasswordModal()" id="forgotBtn">🔑 نسيت كلمة السر..؟</button>
       
       <div class="separator">أو</div>
       
@@ -1581,7 +1581,7 @@
         });
       })
       .then(() => {
-        alert('✅ تم التسجيل بنجاح! تم إرسال رابط التحقق إلى بريدك الإلكتروني.');
+        alert('✅ تم إرسال رابط التحقق إلى بريدك الإلكتروني بنجاح ');
         // لا نقوم بتفريغ الحقول هنا حتى تبقى كما هي
       })
       .catch(err => {
@@ -1792,7 +1792,7 @@
       forgotPasswordMessage.innerHTML = `
         ✅ تم إرسال رابط إعادة تعيين كلمة المرور إلى<br>
         <strong>${emailVal}</strong><br>
-        <span style="font-size:0.9rem;">الرجاء التحقق من بريدك الإلكتروني (بما في مجلد البريد العشوائي)</span>
+        <span style="font-size:0.9rem;">الرجاء التحقق من بريدك الإلكتروني (تحقق ايضاً من مجلد "spam")</span>
       `;
       forgotPasswordMessage.style.display = 'block';
       
